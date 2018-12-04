@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Budget Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+  <main>
+    <div class="budget-display">
+      <span class="budget-date">Available Budget in =Date=:</span>
+      <span id="net-budget">0.00</span>
+
+      <div class="income-block">
+        <span>INCOME</span>
+        <div id="net-income-container">
+          <span id="net-income">+ 0.00</span>
+        </div>
+      </div>
+
+      <div class="expense-block">
+        <span>EXPENSES</span>
+        <div id="net-expense-container">
+          <span id="net-expense">- 0.00</span>
+          <span class="expensePercentage" id="net-expense-percentage">0%</span>
+          <div id="expense-percentage"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <form id="input-field">
+      <input id="text-input" type="text" placeholder="Income/ Expense Title" required>
+      <input id="num-input" type="number" placeholder="Amount" required>
+      <button id="submit-field" type="submit"><i class="far fa-check-circle"></i></button>
+    </form>
+
+    <div id="net-graph-field-container">
+      <div id="net-graph-field">
+        <div id="income">
+          <h4 class="income">Income</h4>
+          <div id="income-list">      
+          </div>
+        </div>
+        <div id="expense">
+          <h4 class="expense">Expenses</h4>
+          <div id="expenses-list">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
