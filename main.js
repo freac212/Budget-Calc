@@ -123,6 +123,7 @@ class Expenses extends Budget {
       });
     } else {
       newNetExpPercentage = 0;
+      netTotalExpenses = 0;
     }
     netExpensesPercentage = newNetExpPercentage;
     netPercentage.innerHTML = `${netExpensesPercentage}%`
