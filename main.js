@@ -111,14 +111,14 @@ class Expenses extends Budget {
     let newNetExpPercentage = 0;
 
     expensesArray.forEach(element => {
-      netTotalExpenses += element._value;
-
-      // Update Expense Item percentage
-      // Divide expenses with income * 100
       if(netIncomeValue == 0){
         newNetExpPercentage = 0;
         netTotalExpenses = 0;
       } else {
+        // Update Expense Item percentage
+        // Divide expenses with income * 100
+        netTotalExpenses += element._value;
+        
         element._percentage = parseInt((  element._value / netIncomeValue )* 100);
         if(element._percentage < 0){
           element._percentage *= -1;
